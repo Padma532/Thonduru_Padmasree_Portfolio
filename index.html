@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thonduru Padmasree | Software Developer at Mashreq Bank</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff;--surface:#f6f7fa;--ink:#161a2b;--muted:#4b5266;--line:#e1e4ea;--accent:#fbbf24;--accent-ink:#1b1646;--teal:#0f766e;--violet:#6d28d9;--pink:#db2777;--orange:#c2410c;--blue:#1d4ed8;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111318;--surface:#1a1d25;--ink:#eef0f5;--muted:#aab0c0;--line:#2c313d;--teal:#4fd1c0;--violet:#b794f6;--pink:#f472b6;--orange:#fb923c;--blue:#60a5fa}}
+:root[data-theme="dark"]{--bg:#111318;--surface:#1a1d25;--ink:#eef0f5;--muted:#aab0c0;--line:#2c313d;--teal:#4fd1c0;--violet:#b794f6;--pink:#f472b6;--orange:#fb923c;--blue:#60a5fa}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif}
+body::before{content:"";display:block;height:8px;background:linear-gradient(90deg,var(--violet),var(--pink),var(--orange),var(--accent),var(--teal),var(--blue))}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;line-height:1.1;margin:0}
+nav{display:flex;gap:22px;flex-wrap:wrap;padding:22px 0;font-weight:500;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center;padding:48px 0 72px}
+.hero h1{font-size:clamp(44px,7vw,84px);font-weight:800;letter-spacing:-.03em;color:var(--violet)}
+.role{font-size:22px;color:var(--pink);font-weight:700;margin:18px 0 14px}
+.lede{color:var(--muted);max-width:52ch;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 20px;border-radius:8px;font-weight:500;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:#6d28d9;border-color:#6d28d9;color:#fff}
+.btn:hover{transform:translateY(-1px)}
+.resp{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;font-size:14px}
+.resp-top{display:flex;justify-content:space-between;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);background:#6d28d9;color:#fff}
+.resp-top b{color:#fde68a;font-weight:500}
+.resp pre{margin:0;padding:18px;white-space:pre-wrap;overflow-x:auto;line-height:1.7}
+.k{color:var(--muted)}.s{color:var(--pink)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(30px,4.5vw,44px);font-weight:700;letter-spacing:-.02em;margin-bottom:32px;display:inline-block;padding-bottom:6px;border-bottom:6px solid var(--c,var(--violet))}
+#projects{--c:var(--pink)}#teach{--c:var(--orange)}#experience{--c:var(--blue)}#education{--c:var(--teal)}
+.skills{display:grid;grid-template-columns:200px 1fr;gap:0 32px;margin:0}
+.skills dt{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;padding:14px 0 14px 14px;border-bottom:1px solid var(--line);border-left:6px solid var(--c);color:var(--c)}
+.skills dt:nth-of-type(6n+1){--c:var(--violet)}.skills dt:nth-of-type(6n+2){--c:var(--pink)}.skills dt:nth-of-type(6n+3){--c:var(--orange)}.skills dt:nth-of-type(6n+4){--c:var(--teal)}.skills dt:nth-of-type(6n+5){--c:var(--blue)}.skills dt:nth-of-type(6n){--c:var(--accent)}
+.skills dd{margin:0;padding:14px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+.proj{--c:var(--violet);background:color-mix(in srgb,var(--c) 10%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 35%,var(--line));border-left:8px solid var(--c);border-radius:12px;padding:28px;margin-bottom:24px}
+.proj:nth-of-type(1){--c:var(--violet)}.proj:nth-of-type(2){--c:var(--pink)}.proj:nth-of-type(3){--c:var(--teal)}
+
+.proj h3{font-size:26px;font-weight:700}
+.stack{color:var(--c);font-weight:500;font-size:15px;margin:8px 0 14px}
+.proj ul{margin:0 0 18px;padding-left:20px;color:var(--muted)}
+.proj li{margin-bottom:8px}
+.proj a{font-weight:500}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.item{margin-bottom:28px}
+.item h3{font-size:22px;font-weight:700}
+.meta{color:var(--teal);font-size:15px;font-weight:500;margin:4px 0 8px}
+.item p,.item ul{margin:0;color:var(--muted)}
+.item ul{padding-left:20px}
+.contact a.mail{display:inline-block;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(24px,5vw,44px);letter-spacing:-.02em;text-decoration-color:var(--accent);text-decoration-thickness:4px;text-underline-offset:6px;overflow-wrap:anywhere}
+.links{display:flex;gap:24px;flex-wrap:wrap;margin-top:22px}
+.topics,.why{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}.topics{margin-bottom:36px}
+.topic{border-radius:12px;padding:20px;color:#fff;background:var(--t)}.topic h3{font-size:20px;margin-bottom:6px}.topic p{margin:0;font-size:15px}
+.topic:nth-child(1){--t:#6d28d9}.topic:nth-child(2){--t:#be185d}.topic:nth-child(3){--t:#c2410c}.topic:nth-child(4){--t:#1d4ed8}.topic:nth-child(5){--t:#0f766e}.topic:nth-child(6){--t:#a21caf}
+.why div{background:var(--surface);border-top:6px solid var(--c);border-radius:0 0 12px 12px;padding:18px}.why h3{font-size:19px;color:var(--c);margin-bottom:6px}.why p{margin:0;color:var(--muted);font-size:15px}
+.why div:nth-child(1){--c:var(--pink)}.why div:nth-child(2){--c:var(--blue)}.why div:nth-child(3){--c:var(--teal)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:800px){
+  .hero{grid-template-columns:1fr;gap:36px;padding-top:24px}
+  .skills{grid-template-columns:1fr}
+  .skills dt{border-bottom:0;padding-bottom:0}
+  .two{grid-template-columns:1fr;gap:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn:hover{transform:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Sections">
+    <a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#teach">Teaching</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>Thonduru Padmasree</h1>
+      <p class="role">Software Developer at Mashreq Bank and Java Full Stack Trainer</p>
+      <p class="lede">I build Spring Boot services and React front ends, and I'm ready to teach how they fit together. I have delivered 3 end-to-end projects with JWT security, role-based access control and MySQL.</p>
+      <div class="btns">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="#teach">What I can teach</a>
+        <a class="btn" href="mailto:sreepadma685@gmail.com">Email me</a>
+      </div>
+    </div>
+    <div class="resp" role="img" aria-label="Sample API response summarising Padmasree's profile">
+      <div class="resp-top"><span>GET /api/padmasree</span><b>200 OK</b></div>
+<pre><span class="k">{</span>
+  <span class="k">"role":</span> <span class="s">"Developer, Trainer"</span>,
+  <span class="k">"company":</span> <span class="s">"Mashreq Bank"</span>,
+  <span class="k">"backend":</span> <span class="s">"Spring Boot, Hibernate"</span>,
+  <span class="k">"frontend":</span> <span class="s">"React.js 17"</span>,
+  <span class="k">"database":</span> <span class="s">"MySQL"</span>,
+  <span class="k">"security":</span> <span class="s">"JWT, RBAC"</span>,
+  <span class="k">"projects":</span> 3,
+  <span class="k">"cgpa":</span> 8.66
+<span class="k">}</span></pre>
+    </div>
+  </header>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Core Java</dt><dd>Collections Framework, exception handling (custom exceptions, @ControllerAdvice), multithreading (ExecutorService, synchronized, wait/notify), Stream API, lambdas</dd>
+      <dt>J2EE</dt><dd>Servlets, JSP, JDBC</dd>
+      <dt>Hibernate</dt><dd>Entity mappings (@OneToMany, @ManyToMany), HQL, session management, caching, lazy and eager loading, Spring Data JPA</dd>
+      <dt>Spring</dt><dd>Spring Boot, Spring MVC, Spring Security (JWT, RBAC), REST APIs</dd>
+      <dt>Microservices</dt><dd>Microservices architecture, API Gateway, inter-service communication</dd>
+      <dt>Frontend</dt><dd>React.js 17 (Hooks, Axios, React Router), HTML5, CSS3, TypeScript (basics)</dd>
+      <dt>Database</dt><dd>MySQL: schema design, query optimization, transactions</dd>
+      <dt>Tools</dt><dd>Git, GitHub, Maven, Postman, Eclipse IDE, VS Code</dd>
+    </dl>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <article class="proj">
+      <h3>IT Helpdesk Ticket System</h3>
+      <p class="stack">Spring Boot, Microservices, React.js 17, MySQL, Spring Security</p>
+      <ul>
+        <li>Microservices-based system with Employee, Technician and Admin roles. Hibernate ORM maps Ticket and User entities (OneToMany/ManyToOne) with HQL queries.</li>
+        <li>REST APIs secured with JWT and Spring Security, with priority-based ticket assignment, status tracking and escalation workflows.</li>
+        <li>React.js 17 dashboard that uses Axios for ticket creation, assignment, filtering and monitoring.</li>
+      </ul>
+      <a href="https://github.com/Padma532" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+    <article class="proj">
+      <h3>Placement Management System</h3>
+      <p class="stack">Spring Boot, React.js 17, MySQL, Spring Security</p>
+      <ul>
+        <li>Hibernate ORM for Student, JobDrive and Application entities (ManyToMany). REST APIs handle job drives, eligibility checks and placement tracking.</li>
+        <li>React.js 17 front end for job applications and recruiter dashboards, with JWT-based role-based access control.</li>
+      </ul>
+      <a href="https://github.com/Padma532" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+    <article class="proj">
+      <h3>Online Banking System</h3>
+      <p class="stack">Spring Boot, React.js 17, MySQL, REST APIs, Spring Security</p>
+      <ul>
+        <li>Hibernate-managed Account and Transaction entities with transactional integrity. REST APIs cover fund transfers, balance inquiries and audit logging.</li>
+        <li>JWT authentication and custom exception handling. The React.js front end provides the account dashboard, transfers and transaction history.</li>
+      </ul>
+      <a href="https://github.com/Padma532" target="_blank" rel="noopener">View on GitHub</a>
+    </article>
+  </section>
+
+  <section id="teach">
+    <h2>What I can teach</h2>
+    <div class="topics">
+      <div class="topic"><h3>Core Java</h3><p>Collections, exception handling, multithreading, Stream API and lambdas.</p></div>
+      <div class="topic"><h3>J2EE and Hibernate</h3><p>Servlets, JSP, JDBC, entity mappings, HQL and caching.</p></div>
+      <div class="topic"><h3>Spring Boot and REST</h3><p>REST APIs, Spring Data JPA and Spring Security with JWT and RBAC.</p></div>
+      <div class="topic"><h3>Microservices</h3><p>Service design, API Gateway and inter-service communication.</p></div>
+      <div class="topic"><h3>React.js</h3><p>Hooks, React Router and calling REST APIs with Axios.</p></div>
+      <div class="topic"><h3>MySQL</h3><p>Schema design, query optimization and transactions.</p></div>
+    </div>
+    <div class="why">
+      <div><h3>Teach with real projects</h3><p>I can use my Helpdesk, Placement and Banking systems as worked examples from database to dashboard.</p></div>
+      <div><h3>Run sessions at scale</h3><p>I coordinated a national symposium with 200+ participants.</p></div>
+      <div><h3>Guide learners</h3><p>I organized career guidance programs and student welfare activities as Treasurer of Helping Hands.</p></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="item">
+      <h3>Software Developer</h3>
+      <p class="meta">Mashreq Bank | Jul 2026 to present</p>
+    </div>
+    <div class="item">
+      <h3>Java Full Stack Development Trainee</h3>
+      <p class="meta">Palle Technologies, Bangalore | Jan 2026 to present</p>
+      <ul>
+        <li>Intensive training in Core Java: collections, exception handling and multithreading.</li>
+        <li>J2EE stack with Servlets, JSP, JDBC and Hibernate ORM, plus Spring Boot and Spring Data JPA.</li>
+        <li>Built microservices REST APIs secured with JWT and Spring Security, and React.js front ends that call them through Axios.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education and leadership</h2>
+    <div class="two">
+      <div>
+        <div class="item">
+          <h3>B.Tech, Computer Science and Engineering</h3>
+          <p class="meta">JNTUA College of Engineering, Pulivendula | 2022 to 2026</p>
+          <p>CGPA 8.66 / 10</p>
+        </div>
+        <div class="item">
+          <h3>Intermediate (MPC)</h3>
+          <p class="meta">Narayana Junior College, Ananthapur | 2020 to 2022</p>
+          <p>95.4 / 100</p>
+        </div>
+      </div>
+      <div>
+        <div class="item">
+          <h3>Main Coordinator, SARVAGNYA 2025</h3>
+          <p class="meta">National-level symposium, JNTUA Pulivendula</p>
+          <p>Planned and ran the event for 200+ participants.</p>
+        </div>
+        <div class="item">
+          <h3>Treasurer, Helping Hands Team</h3>
+          <p class="meta">JNTUA Pulivendula | 2022 to 2026</p>
+          <p>Managed funds and organized welfare activities, cleanliness drives and career guidance programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Hiring a trainer or developer?</h2>
+    <a class="mail" href="mailto:sreepadma685@gmail.com">sreepadma685@gmail.com</a>
+    <div class="links">
+      <a href="tel:+916305480724">+91 63054 80724</a>
+      <a href="https://www.linkedin.com/in/padma-sree-59bb9627b" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/Padma532" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 Thonduru Padmasree</footer>
+</div>
+</body>
+</html>
